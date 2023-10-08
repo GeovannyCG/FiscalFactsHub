@@ -32,20 +32,83 @@
                 <div class="mb-3">
                     <a href="">¿Aun no estas registrado?</a>
                 </div>
+
                 <div class="mb-3">
-                    <div id="first-section-captcha">
-                        <span>J I D E A E A E F S </span>
+                    <div class="input_field captch_box">
+                        <input type="text" value="" disabled />
+                        <button class="refresh_button">
+                            <i class='bx bx-refresh'></i>
+                        </button>
                     </div>
-                    <div id="second-section-captcha">
-                        <input placeholder="Ingresa el captcha" type="text" class="form-control" id="captcha" />
-                        <button><i class='bx bx-refresh'></i></button>
+                    <div class="input_field captch_input">
+                        <input type="text" placeholder="Enter captcha" />
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Login</button>
+                <div class="input_field button disabled ">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
             </form>
         </div>
     </div>
+    <script>
+        // Selecting necessary DOM elements
+        const captchaTextBox = document.querySelector(".captch_box input");
+        const refreshButton = document.querySelector(".refresh_button");
+        const captchaInputBox = document.querySelector(".captch_input input");
+        const message = document.querySelector(".message");
+        const submitButton = document.querySelector(".button");
 
+        // Variable to store generated captcha
+        let captchaText = null;
+
+        // Function to generate captcha
+        const generateCaptcha = () => {
+            const randomString = Math.random().toString(36).substring(2, 7);
+            const randomStringArray = randomString.split("");
+            const changeString = randomStringArray.map((char) => (Math.random() > 0.5 ? char.toUpperCase() : char));
+            captchaText = changeString.join("   ");
+            captchaTextBox.value = captchaText;
+            console.log(captchaText);
+        };
+
+        const refreshBtnClick = () => {
+            generateCaptcha();
+            captchaInputBox.value = "";
+            captchaKeyUpValidate();
+        };
+
+        const captchaKeyUpValidate = () => {
+            //Toggle submit button disable class based on captcha input field.
+            submitButton.classList.toggle("disabled", !captchaInputBox.value);
+
+            if (!captchaInputBox.value) message.classList.remove("active");
+        };
+
+        // Function to validate the entered captcha
+        const submitBtnClick = () => {
+            captchaText = captchaText
+                .split("")
+                .filter((char) => char !== " ")
+                .join("");
+            message.classList.add("active");
+            // Check if the entered captcha text is correct or not
+            if (captchaInputBox.value === captchaText) {
+                message.innerText = "Entered captcha is correct";
+                message.style.color = "#0d6efd";
+            } else {
+                message.innerText = "Entered captcha is not correct";
+                message.style.color = "#FF2525";
+            }
+        };
+
+        // Add event listeners for the refresh button, captchaInputBox, submit button
+        refreshButton.addEventListener("click", refreshBtnClick);
+        captchaInputBox.addEventListener("keyup", captchaKeyUpValidate);
+        submitButton.addEventListener("click", submitBtnClick);
+
+        // Generate a captcha when the page loads
+        generateCaptcha();
+    </script>
     <!--Links de Scripts "Boostrap"-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

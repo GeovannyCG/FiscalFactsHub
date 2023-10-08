@@ -23,78 +23,290 @@
             <h1>Registro</h1>
             <form action="">
                 <div id="register-first-part">
-                    <label for="tipo">Tipo:</label>
+                    <label for="tipo" style="margin-top: 10px;">Tipo: </label>
                     <select class="form-select" aria-label="Default select example" id="tipo">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="" disabled selected>Elige una opción</option>
+                        <option value="1">Fisica</option>
+                        <option value="2">Moral</option>
                     </select>
                 </div>
 
                 <div id="register-second-part">
-                    <div>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">RFC:</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                        </div>
-                        <div>
+                    <div class="row">
+                        <div class="col-md-6">
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">CURP:</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
+                                <label for="rfc" class="form-label" style="margin-top: 10px;">RFC: </label>
+                                <input type="text" class="form-control" id="rfc" aria-describedby="emailHelp"
+                                    placeholder="RFC000001NN">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="curp" class="form-label" style="margin-top: 10px;">CURP: </label>
+                                <input type="text" class="form-control" id="curp" aria-describedby="emailHelp"
+                                    placeholder="XXXXXXXXXXXXXXXXXX">
                             </div>
                         </div>
                     </div>
                 </div>
 
+
                 <div id="register-thirt-part">
                     <div>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">RFC:</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                        </div>
-                        <div>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">CURP:</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
-                            </div>
+                            <label for="exampleInputEmail1" class="form-label">Razon social: </label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="Ruta de PDF">
                         </div>
                     </div>
                 </div>
 
                 <div id="register-four-part">
-                    <div>
-                        <label for="tipo">Tipo:</label>
-                        <select class="form-select" aria-label="Default select example" id="tipo">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="tipo">Tipo:</label>
-                        <select class="form-select" aria-label="Default select example" id="tipo">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="tipo">Tipo:</label>
-                        <select class="form-select" aria-label="Default select example" id="tipo">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="tipo" class="form-label">T. de Proveedor:</label>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-select" aria-label="Default select example" id="tipo1">
+                                <option value="" disabled selected>Elige una opción</option>
+                                <option value="1">Bienes</option>
+                                <option value="2">Servicios</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-select" aria-label="Default select example" id="tipo2">
+                                <option value="" disabled selected>Elige una opción</option>
+                                <option value="1">Aceros</option>
+                                <option value="2">Aditivos</option>
+                                <option value="3">Agregados</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-select" aria-label="Default select example" id="tipo3">
+                                <option value="" disabled selected>Elige una opción</option>
+                                <option value="1">Fletes</option>
+                                <option value="2">Instalación</option>
+                                <option value="3">Internet</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
+
+                <div id="register-five-part">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="exampleInputEmail1" class="form-label" style="margin-top: 10px;">Constancia
+                                Fiscal: </label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Ruta de PDF">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary">
+                                    <img src="./img/d0679e2704e98a8041508fba4c332d49-icono-de-trazo-de-clip-de-papel.png"
+                                        alt="" width="20px" height="20px"> Adjuntar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="register-six-part">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="exampleInputEmail1" class="form-label" style="margin-top: 10px;">O.
+                                Cumplimiento: </label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Ruta de PDF">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary">
+                                    <img src="./img/d0679e2704e98a8041508fba4c332d49-icono-de-trazo-de-clip-de-papel.png"
+                                        alt="" width="20px" height="20px"> Adjuntar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="register-seven-part">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="exampleInputEmail1" class="form-label" style="margin-top: 10px;">Cta. Bancaria:
+                            </label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="mb-3">
+                                <input type="number" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Ruta de PDF">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary">
+                                    <img src="./img/d0679e2704e98a8041508fba4c332d49-icono-de-trazo-de-clip-de-papel.png"
+                                        alt="" width="20px" height="20px"> Adjuntar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="register-eight-part">
+                    <div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Direccion: </label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="Direccion Fiscal">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="register-nine-part">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="exampleInputEmail1" class="form-label" style="margin-top: 10px;">Contacto
+                                Vtas:</label>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Nombre(s)">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Correo">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Telefono">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Celular">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="register-nine-part">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="exampleInputEmail1" class="form-label" style="margin-top: 10px;">Contacto
+                                Conta:</label>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Nombre(s)">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Correo">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Telefono">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Celular">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="register-nine-part">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="exampleInputEmail1" class="form-label" style="margin-top: 10px;">Contacto C y
+                                C:</label>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Nombre(s)">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Correo">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Telefono">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Celular">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="register-eight-part">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="exampleInputEmail1" class="form-label" style="margin-top: 10px;">Dias de credito:</label>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label>
+                                <input type="checkbox" name="opcion" id="miCheckbox">
+                                Contado
+                            </label>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label>
+                                <input type="checkbox" name="opcion" id="miCheckbox">
+                                8 Dias
+                            </label>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label>
+                                <input type="checkbox" name="opcion" id="miCheckbox">
+                                15 Dias
+                            </label>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label>
+                                <input type="checkbox" name="opcion" id="miCheckbox">
+                                30 Dias
+                            </label>
+                        </div>
+                    </div>
+                </div>                
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+
             </form>
         </div>
     </div>
